@@ -1,4 +1,6 @@
- private void imageOnClickDialog(String imageUrl) {
+
+
+      private void imageOnClickDialog(String imageUrl) {
         Dialog alertDialog = new Dialog(EventPastAndFutureDetailsViewActivity.this);
         alertDialog.setCancelable(true);
         alertDialog.getWindow().getDecorView().setBackgroundResource(android.R.color.transparent);
@@ -12,9 +14,9 @@
         showImage.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         alertDialog.setContentView(showImage);
         alertDialog.getWindow().setAttributes(lp);
-        Glide.with(showImage.getContext()).setDefaultRequestOptions(new RequestOptions().placeholder(R.drawable.image_loading)).asBitmap().load(imageUrl).error(R.drawable.ic_training).into(showImage);
+        Glide.with(showImage.getContext()).setDefaultRequestOptions(new                   RequestOptions().placeholder(R.drawable.image_loading)).asBitmap().load(imageUrl).error(R.drawable.ic_training).into(showImage);
         alertDialog.show();
-
+        
         showImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
